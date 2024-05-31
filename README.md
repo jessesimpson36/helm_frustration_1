@@ -20,7 +20,7 @@ The goal of this repository is to document and reproduce this problem, and docum
 ## How to reproduce my issue?
 Using the following command:
 
-```
+```bash
 helm template test null_checking_bug --set existingSecret=jesse
 ```
 

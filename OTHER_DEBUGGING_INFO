@@ -1,0 +1,2 @@
+> helm version
+version.BuildInfo{Version:"v3.11", GitCommit:"", GitTreeState:"", GoVersion:"go1.20.2"}

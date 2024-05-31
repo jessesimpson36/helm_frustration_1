@@ -124,3 +124,11 @@ metadata:
 type: Opaque
 
 ```
+
+
+### Finding 3: include function always evaluates to a string datatype
+
+As part of a recent commit 512aaa7, I now print the types for these templated functions. Using this, I learned that include evaluates only to strings rather than boolean expressions. And I was able to get the desired behavior by converting all of my boolean expressions to do string equality checks.
+
+Example shown in this line of my `solution-1` branch:
+https://github.com/jessesimpson36/helm_frustration_1/blob/5743c75079c1632122db5be63ffe9530ed365dd6/null_checking_bug/templates/_helpers.tpl#L20

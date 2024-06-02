@@ -4,7 +4,7 @@
 
 {{- define "null_checking_bug.isSecretName" -}}
   {{- and (typeIs "map[string]interface {}" .Values.existingSecret)
-          (get .Values.existingSecret "name") -}}
+          (not (empty (get .Values.existingSecret "name"))) -}}
 {{- end -}}
 
 

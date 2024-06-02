@@ -132,3 +132,7 @@ As part of a recent commit 512aaa7, I now print the types for these templated fu
 
 Example shown in this line of my `solution-1` branch:
 https://github.com/jessesimpson36/helm_frustration_1/blob/5743c75079c1632122db5be63ffe9530ed365dd6/null_checking_bug/templates/_helpers.tpl#L20
+
+### Finding 4: local variables are scoped only to their own file
+
+In the branch `attempt2-local-variables`, I tried to use local variables as an abstraction layer for these booleans. Unfortunately, I don't view this as an adequate solution because the declarations of the local variables need to be copied to every file they are used, which can be problematic since implementations of these variable declarations can differ.

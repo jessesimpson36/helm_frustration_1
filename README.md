@@ -24,13 +24,6 @@ Using the following command:
 helm template test null_checking_bug --set existingSecret=jesse
 ```
 
-I also have a `Makefile` which will run 3 scenarios:
-1. No existingSecret provided
-2. existingSecret provided
-3. existingSecret.name provided
-
-
-
 You'll see this error.
 
 ```
@@ -38,6 +31,12 @@ Error: template: null_checking_bug/templates/secret.yaml:7:40: executing "null_c
 
 Use --debug flag to render out invalid YAML
 ```
+
+
+I also have a `Makefile` which will run 3 scenarios:
+1. No existingSecret provided
+2. existingSecret provided
+3. existingSecret.name provided
 
 
 ## What are my findings?
